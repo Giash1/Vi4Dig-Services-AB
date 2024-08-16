@@ -1,0 +1,50 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styling the top-bar */
+#top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px 20px;
+    position: relative;
+}
+
+/* Styling the logo */
+#logo img {
+    width: 80px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+/* Styling the title */
+#top-bar h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Styling the login link */
+#login a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#login a:hover {
+    border-color: #333;
+}

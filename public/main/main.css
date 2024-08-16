@@ -1,0 +1,131 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the main content section */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px; /* Add padding to create space inside the container */
+    margin: 20px auto; /* Center the container and add margin */
+    max-width: 1200px; /* Max width to control layout on larger screens */
+}
+
+/* Title styling */
+.section-title {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 20px; /* Margin below the title */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    font-size: 40px;
+    color: #333;
+    text-align: center;
+    width: auto; /* Adjust width based on content */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Styling each box within the main content */
+.main-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    margin: 10px;
+    box-sizing: border-box;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start with a slight offset */
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Sequential delay for each box using nth-of-type */
+.main-content > .main-box:nth-of-type(1) { animation-delay: 0s; }
+.main-content > .main-box:nth-of-type(2) { animation-delay: 0.2s; }
+.main-content > .main-box:nth-of-type(3) { animation-delay: 0.4s; }
+.main-content > .main-box:nth-of-type(4) { animation-delay: 0.6s; }
+.main-content > .main-box:nth-of-type(5) { animation-delay: 0.8s; }
+.main-content > .main-box:nth-of-type(6) { animation-delay: 1.0s; }
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add hover effect to the boxes */
+.main-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+/* Title within each box */
+.main-box h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Paragraph styling within each box */
+.main-box p {
+    font-size: 20px;
+}
+
+/* Call-to-action styling */
+.cta {
+    text-align: center;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    border: 1px solid #ddd;
+    padding: 20px; /* Add padding */
+    width: 700px;
+}
+
+.cta h3 {
+    font-size: 30px;
+    color: #333;
+}
+
+.cta p {
+    font-size: 20px;
+    color: #333;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-box {
+        width: calc(50% - 20px); /* Two boxes per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-box {
+        width: calc(100% - 20px); /* One box per row */
+    }
+}

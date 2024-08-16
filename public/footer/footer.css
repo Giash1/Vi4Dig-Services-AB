@@ -1,0 +1,110 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the footer */
+#footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the footer content */
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left side: Company Logo */
+.footer-left img {
+    width: 80px;
+    height: auto;
+}
+
+/* Center: Social Media Links */
+.footer-center {
+    flex-grow: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.social-media-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media-list li {
+    display: inline;
+}
+
+.social-media-list a {
+    display: inline-block;
+}
+
+.social-media-list img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.social-media-list a:hover img {
+    opacity: 0.8;
+}
+
+/* Right side: Company Address */
+.footer-right {
+    text-align: center;
+    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+}
+
+/* Address Header and Text */
+.footer-right h1 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-right p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .footer-left,
+    .footer-right {
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .footer-right {
+        text-align: center; /* Center address on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media-list {
+        flex-direction: column; /* Stack social media icons vertically on very small screens */
+        gap: 10px;
+    }
+
+    .social-media-list img {
+        width: 20px; /* Adjust icon size for smaller screens */
+        height: 20px;
+    }
+}
