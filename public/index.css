@@ -1,3 +1,24 @@
+:root {
+    --primary-font: 'Roboto', sans-serif;
+    --primary-color: #333;
+    --secondary-color: #666;
+    --background-overlay: rgba(255, 255, 255, 0.8);
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --h1-font-size: 35px;
+    --h1-font-weight: bold;
+    --h2-font-size: 25px;
+    --h2-font-weight: normal;
+    --h3-font-size: 20px;
+    --h3-font-weight: bold;
+    --p-font-size: 16px;
+    --p-font-weight: normal;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --link-font-size: 16px;
+    --border-radius: 4px;
+    --transition-speed: 0.3s;
+}
+
 /* Resetting default styles */
 * {
     margin: 0;
@@ -7,7 +28,7 @@
 
 /* Applying the background video to the body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--primary-font); /* Use the primary font from the root variables */
     background: transparent; /* Background handled by video */
     min-height: 100vh; /* Ensures the body takes up the full viewport height */
     display: flex;
@@ -27,10 +48,10 @@ body {
 
 /* Styling for sections */
 section {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    background-color: var(--background-overlay); /* Semi-transparent background */
     padding: 20px; /* Uniform padding for all sections */
     margin: 10px; /* Uniform margin for all sections */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for all sections */
+    box-shadow: var(--box-shadow); /* Slight shadow for all sections */
 }
 
 /* Header Styling */
@@ -38,8 +59,9 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    background-color: var(--background-overlay); /* Semi-transparent background */
+    box-shadow: var(--box-shadow); /* Shadow */
+    padding: 10px; /* Padding for the header */
 }
 
 /* Styling the logo */
@@ -51,40 +73,40 @@ section {
 /* Styling the title */
 #top-bar h1 {
     font-size: 24px;
-    color: #333;
+    color: var(--primary-color); /* Primary text color */
     text-align: center;
     flex-grow: 1;
 }
 
 /* Styling the login link */
 #login a {
-    font-size: 18px;
-    color: #333;
+    font-size: var(--link-font-size);
+    color: var(--primary-color); /* Primary text color */
     text-decoration: none;
     padding: 10px 15px;
     border: 1px solid transparent;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
 }
 
 #login a:hover {
-    border-color: #333;
+    border-color: var(--primary-color); /* Border color on hover */
 }
 
 /* Navigation Section */
 #nav {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    box-shadow: var(--box-shadow); /* Slight shadow */
 }
 
 /* Main Content Section */
 #main {
     flex-grow: 1;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    box-shadow: var(--box-shadow); /* Slight shadow */
 }
 
 /* Footer Section */
 #footer {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    background-color: var(--background-overlay); /* Semi-transparent background */
     text-align: center;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow */
 }

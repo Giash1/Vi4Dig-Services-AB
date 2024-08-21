@@ -1,51 +1,44 @@
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Styling the main content section */
 .main-content {
     display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center horizontally */
-    padding: 20px; /* Add padding to create space inside the container */
-    margin: 20px auto; /* Center the container and add margin */
-    max-width: 1200px; /* Max width to control layout on larger screens */
+    padding: 20px; /* Add padding */
+    margin: 20px auto; /* Center and add margin */
+    max-width: 1200px; /* Max width for larger screens */
 }
 
 /* Title styling */
 .section-title {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    background-color: var(--background-overlay);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px 20px;
-    margin-bottom: 20px; /* Margin below the title */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    font-size: 40px;
-    color: #333;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px var(--box-shadow);
+    font-size: var(--h1-font-size);
+    color: var(--primary-color);
     text-align: center;
-    width: auto; /* Adjust width based on content */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: auto;
+    transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
 /* Styling each box within the main content */
 .main-box {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--background-overlay);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    width: 700px;
+    box-shadow: var(--box-shadow);
+    width: 700px; /* Default width */
     margin: 10px;
     box-sizing: border-box;
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start with a slight offset */
+    opacity: 0;
+    transform: translateY(20px);
     animation: fadeInUp 0.5s ease-out forwards;
 }
 
-/* Sequential delay for each box using nth-of-type */
+/* Sequential delay for each box */
 .main-content > .main-box:nth-of-type(1) { animation-delay: 0s; }
 .main-content > .main-box:nth-of-type(2) { animation-delay: 0.2s; }
 .main-content > .main-box:nth-of-type(3) { animation-delay: 0.4s; }
@@ -74,50 +67,50 @@
 /* Title within each box */
 .main-box h3 {
     text-align: center;
-    font-size: 30px;
+    font-size: var(--h3-font-size);
 }
 
 /* Paragraph styling within each box */
 .main-box p {
-    font-size: 20px;
+    font-size: var(--p-font-size);
 }
 
 /* Call-to-action styling */
 .cta {
     text-align: center;
     margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    background-color: var(--background-overlay);
     border: 1px solid #ddd;
-    padding: 20px; /* Add padding */
-    width: 700px;
+    padding: 20px;
+    width: 700px; /* Default width */
 }
 
 .cta h3 {
-    font-size: 30px;
-    color: #333;
+    font-size: var(--h3-font-size);
+    color: var(--primary-color);
 }
 
 .cta p {
-    font-size: 20px;
-    color: #333;
+    font-size: var(--p-font-size);
+    color: var(--primary-color);
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #007bff;
+    background-color: var(--link-color);
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
+    border-radius: var(--border-radius);
+    font-size: var(--link-font-size);
+    transition: background-color var(--transition-speed) ease;
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: var(--link-hover-color);
 }
 
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .main-box {
         width: calc(50% - 20px); /* Two boxes per row */
@@ -127,5 +120,9 @@
 @media (max-width: 480px) {
     .main-box {
         width: calc(100% - 20px); /* One box per row */
+    }
+
+    .cta {
+        width: calc(100% - 20px); /* Full width for call-to-action */
     }
 }

@@ -1,0 +1,42 @@
+/* public/nav/services/windowCleaning/windowCleaning.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 1em;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main {
+    padding: 2em;
+}
+
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add specific styles for window cleaning page here */
