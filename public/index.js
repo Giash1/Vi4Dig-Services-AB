@@ -13,7 +13,7 @@ function loadHTML(section, filePath) {
 }
 
 // Load the different sections
-loadHTML('heading', './heading/headin.html');
+loadHTML('heading', './heading/heading.html');
 loadHTML('nav', './nav/nav.html');
 loadHTML('main', './main/main.html');
 loadHTML('footer', './footer/footer.html');

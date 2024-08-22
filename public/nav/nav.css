@@ -1,4 +1,24 @@
 /* Base styles for navigation */
+:root {
+    --primary-font: 'Roboto', sans-serif;
+    --primary-color: #333;
+    --secondary-color: #666;
+    --background-overlay: rgba(255, 255, 255, 0.8);
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --h1-font-size: 35px;
+    --h1-font-weight: bold;
+    --h2-font-size: 25px;
+    --h2-font-weight: normal;
+    --h3-font-size: 20px;
+    --h3-font-weight: bold;
+    --p-font-size: 16px;
+    --p-font-weight: normal;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --link-font-size: 16px;
+    --border-radius: 4px;
+    --transition-speed: 0.3s;
+}
 #main-nav {
     background-color: var(--primary-color);
     padding: 10px 0;
@@ -18,7 +38,7 @@
 }
 
 .nav-list a {
-    color: white;
+    color: rgba(236, 104, 15, 0.836);
     text-decoration: none;
     padding: 14px 20px;
     display: block;
