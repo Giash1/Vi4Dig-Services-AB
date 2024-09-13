@@ -1,42 +1,83 @@
-/* public/nav/services/windowCleaning/windowCleaning.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #f8f8f8;
-    padding: 1em;
-}
-
-.nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-list li {
-    display: inline;
-    margin-right: 15px;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: #333;
-}
-
-.main {
-    padding: 2em;
-}
-
-footer {
-    background-color: #f8f8f8;
+#home-cleaning-content {
+    background-color: var(--background-overlay);
+    padding: 20px; /* Match padding with footer */
+    margin: 20px auto; /* Center content with auto margins */
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    max-width: 1200px; /* Same max-width as footer for alignment */
 }
 
-/* Add specific styles for window cleaning page here */
+/* Adjust margins for headings to maintain spacing consistency */
+#home-cleaning-content h1 {
+    font-size: var(--h1-font-size);
+    color: var(--primary-color);
+    margin-bottom: 20px; /* Reduced margin to match footer spacing */
+}
+
+#home-cleaning-content p {
+    font-size: var(--p-font-size);
+    color: var(--secondary-color);
+    margin-bottom: 20px; /* Ensure consistent spacing */
+}
+
+#home-cleaning-content h2 {
+    font-size: var(--h2-font-size);
+    color: var(--primary-color);
+    margin-bottom: 20px; /* Consistent margin with headings */
+}
+
+#home-cleaning-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+#home-cleaning-content li {
+    font-size: var(--p-font-size);
+    color: var(--primary-color);
+    margin: 10px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+#home-cleaning-content li::before {
+    content: "✔"; /* Checkmark icon for list items */
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home-cleaning-content {
+        padding: 15px; /* Adjusted for smaller screens */
+        margin: 15px auto;
+    }
+
+    #home-cleaning-content h1 {
+        font-size: var(--h2-font-size);
+        margin-bottom: 15px; /* Reduced margin for smaller screens */
+    }
+
+    #home-cleaning-content h2 {
+        font-size: var(--h3-font-size);
+        margin-bottom: 15px; /* Consistent margin */
+    }
+}
+
+@media (max-width: 480px) {
+    #home-cleaning-content {
+        padding: 10px; /* Further reduced padding for smallest screens */
+        margin: 10px auto;
+    }
+
+    #home-cleaning-content h1 {
+        font-size: var(--h3-font-size);
+        margin-bottom: 10px; /* Adjusted spacing */
+    }
+
+    #home-cleaning-content h2 {
+        font-size: var(--p-font-size);
+        margin-bottom: 10px; /* Reduced margin for small screens */
+    }
+}

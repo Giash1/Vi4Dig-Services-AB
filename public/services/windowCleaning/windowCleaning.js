@@ -1,7 +1,27 @@
-// public/nav/services/windowCleaning/windowCleaning.js
 
-document.addEventListener('DOMContentLoaded', () => {
-    // JavaScript code specific to the window cleaning page can go here
+function loadHTML(section, filePath, cssPath, jsPath) {
+    if (cssPath) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = cssPath;
+        document.head.appendChild(link);
+    }
 
-    console.log('Window Cleaning page loaded.');
-});
+    fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(section).innerHTML = data;
+            // Check that the section does not reintroduce video
+            if (jsPath) {
+                const script = document.createElement('script');
+                script.src = jsPath;
+                document.body.appendChild(script);
+            }
+        })
+        .catch(err => console.error(`Error loading ${filePath}:`, err));
+}
+
+// Load sections without adding the video back
+loadHTML('heading', '../../heading/heading.html', '../../heading/heading.css', '../../heading/heading.js');
+loadHTML('nav', '../../nav/nav.html', '../../nav/nav.css', '../../nav/nav.js');
+loadHTML('footer', '../../footer/footer.html', '../../footer/footer.css', '../../footer/footer.js');

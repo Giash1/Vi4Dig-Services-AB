@@ -1,4 +1,3 @@
-// Function to dynamically load HTML components into the specified section
 function loadHTML(section, filePath, cssPath, jsPath) {
     console.log(`Attempting to load ${filePath} into section #${section}`);
 
@@ -30,10 +29,13 @@ function loadHTML(section, filePath, cssPath, jsPath) {
                 console.log(`Loaded script ${jsPath}`);
             }
         })
-        .catch(err => console.error(`Error loading ${filePath}:`, err));
+        .catch(err => {
+            console.error(`Error loading ${filePath}:`, err);
+            alert(`Error loading ${filePath}: ${err.message}`);
+        });
 }
 
-// Load sections dynamically with specific paths
-loadHTML('heading', '../../heading/heading.html', '../../heading/heading.css', '../../heading/heading.js');
-loadHTML('nav', '../../nav/nav.html', '../../nav/nav.css', '../../nav/nav.js');
-loadHTML('footer', '../../footer/footer.html', '../../footer/footer.css', '../../footer/footer.js');
+// Test each loadHTML call individually
+loadHTML('heading', '../heading/heading.html', '../heading/heading.css', '../heading/heading.js');
+loadHTML('nav', '../nav/nav.html', '../nav/nav.css', '../nav/nav.js');
+loadHTML('footer', '../footer/footer.html', '../footer/footer.css', '../footer/footer.js');

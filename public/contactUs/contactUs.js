@@ -34,6 +34,6 @@ function loadHTML(section, filePath, cssPath, jsPath) {
 }
 
 // Load sections dynamically with specific paths
-loadHTML('heading', '../../heading/heading.html', '../../heading/heading.css', '../../heading/heading.js');
-loadHTML('nav', '../../nav/nav.html', '../../nav/nav.css', '../../nav/nav.js');
-loadHTML('footer', '../../footer/footer.html', '../../footer/footer.css', '../../footer/footer.js');
+loadHTML('heading', '../heading/heading.html', '../heading/heading.css', '../heading/heading.js');
+loadHTML('nav', '../nav/nav.html', '../nav/nav.css', '../nav/nav.js');
+loadHTML('footer', '../footer/footer.html', '../footer/footer.css', '../footer/footer.js');
