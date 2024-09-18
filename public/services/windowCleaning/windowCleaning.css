@@ -1,30 +1,29 @@
+/* Main content styling for Floor Cleaning Services */
 #home-cleaning-content {
     background-color: var(--background-overlay);
-    padding: 20px; /* Match padding with footer */
-    margin: 20px auto; /* Center content with auto margins */
+    padding: 30px;
+    margin: 20px;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     text-align: center;
-    max-width: 1200px; /* Same max-width as footer for alignment */
 }
 
-/* Adjust margins for headings to maintain spacing consistency */
 #home-cleaning-content h1 {
     font-size: var(--h1-font-size);
     color: var(--primary-color);
-    margin-bottom: 20px; /* Reduced margin to match footer spacing */
+    margin-bottom: 20px;
 }
 
 #home-cleaning-content p {
     font-size: var(--p-font-size);
     color: var(--secondary-color);
-    margin-bottom: 20px; /* Ensure consistent spacing */
+    margin-bottom: 20px;
 }
 
 #home-cleaning-content h2 {
     font-size: var(--h2-font-size);
     color: var(--primary-color);
-    margin-bottom: 20px; /* Consistent margin with headings */
+    margin-bottom: 15px;
 }
 
 #home-cleaning-content ul {
@@ -47,37 +46,45 @@
     color: var(--primary-color);
 }
 
+/* Styles for the "More" button */
+#moreBtn {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Initially hide the additional content */
+#moreContent {
+    display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #home-cleaning-content {
-        padding: 15px; /* Adjusted for smaller screens */
-        margin: 15px auto;
+        padding: 20px;
+        margin: 15px;
     }
 
     #home-cleaning-content h1 {
         font-size: var(--h2-font-size);
-        margin-bottom: 15px; /* Reduced margin for smaller screens */
     }
 
     #home-cleaning-content h2 {
         font-size: var(--h3-font-size);
-        margin-bottom: 15px; /* Consistent margin */
     }
 }
 
 @media (max-width: 480px) {
     #home-cleaning-content {
-        padding: 10px; /* Further reduced padding for smallest screens */
-        margin: 10px auto;
+        padding: 15px;
+        margin: 10px;
     }
 
     #home-cleaning-content h1 {
         font-size: var(--h3-font-size);
-        margin-bottom: 10px; /* Adjusted spacing */
     }
 
     #home-cleaning-content h2 {
         font-size: var(--p-font-size);
-        margin-bottom: 10px; /* Reduced margin for small screens */
     }
 }

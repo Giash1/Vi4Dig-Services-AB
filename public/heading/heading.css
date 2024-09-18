@@ -28,6 +28,8 @@
     font-size: var(--link-font-size);
     color: var(--primary-color);
     text-decoration: none;
+    pointer-events: auto;
+    z-index: 10;
     padding: 10px 15px;
     border: 1px solid transparent;
     border-radius: var(--border-radius);

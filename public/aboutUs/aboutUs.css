@@ -1,8 +1,4 @@
-Main content styling for Home Cleaning Services
-
-
-
-
+/* Main content styling for Floor Cleaning Services */
 #home-cleaning-content {
     background-color: var(--background-overlay);
     padding: 30px;
@@ -16,14 +12,11 @@ Main content styling for Home Cleaning Services
     font-size: var(--h1-font-size);
     color: var(--primary-color);
     margin-bottom: 20px;
-    text-align: center;
-    margin-top:20px ;
-
 }
 
 #home-cleaning-content p {
-    font-size:15px;
-    color: black;
+    font-size: var(--p-font-size);
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
@@ -51,6 +44,18 @@ Main content styling for Home Cleaning Services
     position: absolute;
     left: 0;
     color: var(--primary-color);
+}
+
+/* Styles for the "More" button */
+#moreBtn {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Initially hide the additional content */
+#moreContent {
+    display: none;
 }
 
 /* Responsive Design */

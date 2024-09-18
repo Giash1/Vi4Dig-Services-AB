@@ -1,18 +1,15 @@
-// Optional JavaScript to enhance user interactions
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Additional JS functionality can be added here
-    // For example, adding a hover effect to highlight each box
+    // Select all .main-box elements
     const boxes = document.querySelectorAll('.main-box');
-    
+
+    // Loop through each box and add event listeners for hover effects
     boxes.forEach(box => {
         box.addEventListener('mouseenter', () => {
-            box.style.transform = 'scale(1.05)';
-            box.style.transition = 'transform 0.3s ease';
+            box.style.transform = 'scale(1.05)'; // Add hover effect
         });
-        
+
         box.addEventListener('mouseleave', () => {
-            box.style.transform = 'scale(1)';
+            box.style.transform = 'scale(1)'; // Revert back to normal
         });
     });
 });

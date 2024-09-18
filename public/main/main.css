@@ -58,11 +58,13 @@
     }
 }
 
-/* Add hover effect to the boxes */
+
 .main-box:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
+
 
 /* Title within each box */
 .main-box h3 {
