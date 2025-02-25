@@ -1,3 +1,4 @@
+<!-- filepath: /c:/Users/giash/OneDrive/Documents/Vi4dig/Vi4Dig-Services-AB/public/register/register.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,57 @@
     <link rel="stylesheet" href="../heading/heading.css">
     <link rel="stylesheet" href="../nav/nav.css">
     <link rel="stylesheet" href="../footer/footer.css">
+    <!-- Add Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCNFlfzO1EPzfrB2UNXydMq0Jo28yFeyis",
+            authDomain: "vi4digserviceab-50311.firebaseapp.com",
+            projectId: "vi4digserviceab-50311",
+            storageBucket: "vi4digserviceab-50311.firebasestorage.app",
+            messagingSenderId: "511149050934",
+            appId: "1:511149050934:web:9d95a75003aa9cd22a5c97",
+            measurementId: "G-JV1ESF2NP5"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const registerForm = document.querySelector('#register-form');
+
+            registerForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent the default form submission
+
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match');
+                    return;
+                }
+
+                createUserWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        // User registered successfully
+                        const user = userCredential.user;
+                        alert('Registration successful!');
+                        // Redirect to login page or perform other actions
+                        window.location.href = '../login/login.html';
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert('Registration failed: ' + error.message);
+                    });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Header Section -->
@@ -20,22 +72,22 @@
     <!-- Main Content -->
     <div id="register-content">
         <h1>Register</h1>
-        <form action="/register" method="POST">
+        <form id="register-form">
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required autocomplete="username">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required autocomplete="email">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required autocomplete="new-password">
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <input type="password" id="confirm-password" name="confirm-password" required autocomplete="new-password">
             </div>
             <button type="submit">Register</button>
         </form>

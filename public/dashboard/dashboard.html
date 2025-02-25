@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../contactUs/contactUs.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../heading/heading.css">
+    <link rel="stylesheet" href="../nav/nav.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="heading"></div>
+    
+    <!-- Navigation Section -->
+    <div id="nav"></div>
+
+    <!-- Main Content -->
+    <div id="home-cleaning-content">
+        <video id="background-video" autoplay muted loop>
+            <source src="../../images/6195520-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Welcome to the Dashboard</h1>
+        <p>This is the dashboard page.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script src="../contactUs/contactUs.js"></script>
+    <script>
+        // Load sections dynamically with specific paths
+        loadHTML('heading', '../heading/heading.html', '../heading/heading.css', '../heading/heading.js');
+        loadHTML('nav', '../nav/nav.html', '../nav/nav.css', '../nav/nav.js');
+        loadHTML('footer', '../footer/footer.html', '../footer/footer.css', '../footer/footer.js');
+    </script>
+</body>
+</html>

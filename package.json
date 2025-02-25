@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Giash1/Vi4Dig-Services-AB#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "firebase": "^11.3.1"
   }
 }

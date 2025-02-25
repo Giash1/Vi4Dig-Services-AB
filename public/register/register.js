@@ -1,47 +1,33 @@
-function loadHTML(section, filePath, cssPath, jsPath) {
-    console.log(`Attempting to load ${filePath} into section #${section}`);
+// filepath: /c:/Users/giash/OneDrive/Documents/Vi4dig/Vi4Dig-Services-AB/public/register/register.js
+document.addEventListener('DOMContentLoaded', () => {
+    const registerForm = document.querySelector('#register-form');
 
-    // Load CSS if provided
-    if (cssPath) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = cssPath;
-        link.onload = () => console.log(`Loaded CSS: ${cssPath}`);
-        link.onerror = (err) => console.error(`Failed to load CSS: ${cssPath}`, err);
-        document.head.appendChild(link);
-    }
+    registerForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the default form submission
 
-    // Fetch the HTML content and insert it into the specified section
-    fetch(filePath)
-        .then(response => {
-            console.log(`Fetching ${filePath}: Status ${response.status}`);
-            if (!response.ok) {
-                throw new Error(`Failed to load ${filePath}, status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            const sectionElement = document.getElementById(section);
-            if (!sectionElement) {
-                throw new Error(`Section #${section} not found in the DOM.`);
-            }
-            sectionElement.innerHTML = data;
-            console.log(`Loaded ${filePath} successfully into #${section}`);
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
 
-            // Load JavaScript if provided
-            if (jsPath) {
-                const script = document.createElement('script');
-                script.src = jsPath;
-                script.onload = () => console.log(`Loaded script: ${jsPath}`);
-                script.onerror = (err) => console.error(`Failed to load script: ${jsPath}`, err);
-                document.body.appendChild(script);
-            }
-        })
-        .catch(err => {
-            console.error(`Error loading ${filePath}:`, err);
-            alert(`Error loading ${filePath}: ${err.message}`);
-        });
-}
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // User registered successfully
+                const user = userCredential.user;
+                alert('Registration successful!');
+                // Redirect to login page or perform other actions
+                window.location.href = '../login/login.html';
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Registration failed: ' + error.message);
+            });
+    });
+});
 
 // Test each loadHTML call individually
 loadHTML('heading', '../../heading/heading.html', '../../heading/heading.css', '../../heading/heading.js');
