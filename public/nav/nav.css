@@ -1,7 +1,7 @@
 /* Base styles for navigation */
 :root {
     --primary-font: 'Roboto', sans-serif;
-    --primary-color: #333;
+    --primary-color: #333333;
     --secondary-color: #666;
     --background-overlay: rgba(255, 255, 255, 0.8);
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -38,13 +38,14 @@
 }
 
 .nav-list a {
-    color: rgba(236, 104, 15, 0.836);
+    color: rgba(228, 105, 12, 0.836);
     text-decoration: none;
     padding: 14px 20px;
     display: block;
     font-size: var(--link-font-size);
     text-align: center;
     transition: background-color var(--transition-speed) ease;
+    font-weight: bolder;
 }
 
 .nav-list a:hover {
