@@ -92,15 +92,17 @@
 
 /* ==== Contact Cards ==== */
 .contact-cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 24px;
-    justify-content: center;
-    margin: 30px 0;
+    justify-items: center;
+    align-items: stretch;
+    margin: 30px auto;
+    max-width: 900px;
 }
 
 .contact-card {
-    flex: 1 1 320px;
+    width: 100%;
     max-width: 420px;
     background: rgba(255, 255, 255, 0.95);
     color: #222;
@@ -195,8 +197,7 @@
 
 @media (max-width: 700px) {
     .contact-cards {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
     .contact-card {
         max-width: 100%;
