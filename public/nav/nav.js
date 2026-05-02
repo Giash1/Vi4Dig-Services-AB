@@ -1,4 +1,4 @@
-// Dropdown logic
+﻿// Dropdown logic
 const dropdowns = document.querySelectorAll('.dropdown');
 
 dropdowns.forEach(dropdown => {
@@ -61,6 +61,8 @@ const translations = {
             contactUsDesc: "Have questions about our services or need assistance with your booking? Our friendly customer service team is here to help. You can reach us by phone or email, and we’ll be happy to assist you with all your inquiries.",
             customerSupport: "Customer Support",
             customerSupportDesc: "If you have any questions about our services, bookings, or the RUT deduction, please contact our customer support team. Most common questions and answers can also be found on our FAQ page.",
+            executiveDirector: "Executive Director",
+            ceo: "CEO",
             phone: "Phone",
             or: "or",
             email: "Email",
@@ -377,6 +379,8 @@ const translations = {
             contactUsDesc: "Har du frågor om våra tjänster eller behöver hjälp med din bokning? Vår vänliga kundtjänst finns här för att hjälpa dig. Du kan nå oss via telefon eller e-post, och vi hjälper dig gärna med alla dina frågor.",
             customerSupport: "Kundtjänst",
             customerSupportDesc: "Om du har några frågor om våra tjänster, bokningar eller RUT-avdraget, vänligen kontakta vår kundtjänst. De vanligaste frågorna och svaren finns också på vår FAQ-sida.",
+            executiveDirector: "Verkställande direktör",
+            ceo: "VD",
             phone: "Telefon",
             or: "eller",
             email: "E-post",
@@ -503,6 +507,8 @@ const translations = {
             contactUsDesc: "Har du frågor om våra tjänster eller behöver hjälp med din bokning? Vår vänliga kundtjänst finns här för att hjälpa dig. Du kan nå oss via telefon eller e-post, och vi hjälper dig gärna med alla dina frågor.",
             customerSupport: "Kundtjänst",
             customerSupportDesc: "Om du har några frågor om våra tjänster, bokningar eller RUT-avdraget, vänligen kontakta vår kundtjänst. De vanligaste frågorna och svaren finns också på vår FAQ-sida.",
+            executiveDirector: "Verkställande direktör",
+            ceo: "VD",
             phone: "Telefon",
             or: "eller",
             email: "E-post",
